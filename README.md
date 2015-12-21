@@ -36,8 +36,8 @@ xo-custom -- written by Jerry Vonau, incorporated into mktinycorexo by James Cam
 
 onxo10.sh -- originally written for the xo1, to implement the additional functions (openvpn, sshd, kiwix, maybe apache). But then I tested it on the XO1.5, and added the phrase to download and install my custom kernel (which includes the bridge module needed for wifi networking). The obvious next step is break up onxo10 into onxo1.0.sh, and onxo1.5.sh.
 
-XO1.5
-=====
-The preference is to use OS builder to generate the base image (if gnome works on the 1.5) because I can disable the funny chroot/file layout required by Quanta, and the update in the field strategy.
+XO1.5 Legacy
+============
+The preference is to use OS builder to generate the base image (if Gnome works on the 1.5) because I can disable the funny chroot/file layout required by Quanta, and the update in the field strategy.
 
 Three times, I've encoundered pip errors during loader process regarding __dso_handle. This time I yum removed gcc-4.7, and "yum install compat-gcc-43".
