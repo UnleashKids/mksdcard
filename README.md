@@ -1,13 +1,13 @@
 ###XO1 Cookbook
 ------------
-* Install stock 13.2.5 from OLPC (9:10) This involves unzipping the image to an USB stick and doing 4 button install.(see http://wiki.laptop.org/go/Release_notes/13.2.5XO-1_with_SD_card)
+* Install stock 13.2.5 from OLPC (9:10am) This involves unzipping the image to an USB stick and doing 4 button install. (see http://wiki.laptop.org/go/Release_notes/13.2.5XO-1_with_SD_card)
 * Get the new SD card image booted, and on the network 
-* Install git--"yum install -y git" (9:25)
+* Install git--"yum install -y git" (9:25am)
 * Git clone https://github.com/georgejhunt/mksdcard
-* Execute mksdcard/scripts/onxo1.0.sh (9:45) 
+* Execute mksdcard/scripts/onxo1.0.sh (9:45am) 
 * This script will reboot very quickly to change the size of temp file systems.
 * Just su to root, and restart the script 
-* done (11:15)
+* done (11:15am)
 * A reboot is required for all of the setup to complete.
 
 As an aside if preparing to make a new distribution, do the following::
@@ -32,12 +32,12 @@ mkxo10.sh -- script which accepts an os-builder image name (assumed to be in /ro
 
 8gb -- this script tries to copy desired kiwix content to the SD card -- assumes that the content is on the same machine located at /root/content/zims
 
-xo-custom -- written by Jerry Vonau, incorporated into mktinycorexo  by James Cameron, perhaps useful in doing a chroot, and all of the assembly on a SD card on a larger machine.
+xo-custom -- written by Jerry Vonau, incorporated into mktinycorexo by James Cameron, perhaps useful in doing a chroot, and all of the assembly on a SD card on a larger machine.
 
 onxo10.sh -- originally written for the xo1, to implement the additional functions (openvpn, sshd, kiwix, maybe apache). But then I tested it on the XO1.5, and added the phrase to download and install my custom kernel (which includes the bridge module needed for wifi networking). The obvious next step is break up onxo10 into onxo1.0.sh, and onxo1.5.sh.
-XO1.5
-=====
-The preference is to use OS builder to generate the base image (if gnome works on the 1.5) because I can disable the funny chroot/file layout required by Quanta, and the update in the field strategy.
+
+XO1.5 Legacy
+============
+The preference is to use OS builder to generate the base image (if Gnome works on the 1.5) because I can disable the funny chroot/file layout required by Quanta, and the update in the field strategy.
 
 Three times, I've encoundered pip errors during loader process regarding __dso_handle. This time I yum removed gcc-4.7, and "yum install compat-gcc-43".
-
